@@ -1,7 +1,6 @@
-function Tarea (titulo,horario,detalle) {
+function Tarea (titulo,fecha) {
     this.titulo = titulo;
-    this.horario = horario;
-    this.detalle = detalle;
+    this.fecha = fecha;
 }
 
 
@@ -17,6 +16,7 @@ Agenda.prototype.addTarea = function(t) {
 //definicion de una variable global para almacenar una agenda.
 var globalAgenda;
 
+
 function iniciar(){
 	var seccionCreacionAgenda = document.getElementById("creacionAgenda");
 	var duenioAgenda= document.getElementById("duenioAgenda");
@@ -27,6 +27,11 @@ function iniciar(){
 
 	var bloqueGestionTareas= document.getElementById("bloqueGestionTareas");
 
+	var listaTareas =document.getElementById("listaTareas");
+	var btnAddTarea = document.getElementById("btnAddTarea");
+
+	var inputTareaTitulo = document.getElementById("txtTitulo");
+	var inputTareaHorario = document.getElementById("txtHora");
 
 	seccionDatoAgenda.style.display="none";
 	bloqueGestionTareas.style.display="none";
@@ -42,5 +47,14 @@ function iniciar(){
 		nombreDuenioAgenda.innerHTML=duenioAgenda.value;
 	});
 
-
+//cuando hace click en el boton crear agenda se crea la agenda del duenio en la variable global
+	btnAddTarea.addEventListener('click',function(){
+		var t = new Tarea(inputTareaTitulo.value,inputTareaHorario.value);
+		globalAgenda.addTarea(t);
+		var li = document.createElement("li");
+  		li.appendChild(document.createTextNode(t.titulo+" - "+t.horario));
+  		listaTareas.appendChild(li);
+  		inputTareaTitulo.value='';
+		inputTareaHorario.value='';
+  	});
 }

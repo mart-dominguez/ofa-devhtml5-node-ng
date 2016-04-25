@@ -2,15 +2,15 @@
 <head>
 	<title>Laboratorio 03</title>
 	<!--COMPLETAR#1 --> 
-  	<script src="COMPLETAR#1"></script>
+  	<script src="agenda.js"></script>
 </head>
-<body <!--COMPLETAR#2--> >
+<body onLoad="iniciar()">
 	<header id="header">
 		<h1>Agenda</h1>
 		<div id="creacionAgenda">
 			<div>Due&ntilde;o de la agenda</div>
 			<div><input type="text" id="duenioAgenda" /></div>
-			<div><!--COMPLETAR#3--><button type="button" id="btnCrearAgenda">Crear Agenda</button></div>
+			<div><button type="button" id="btnCrearAgenda" >Crear Agenda</button></div>
 		</div>
 		<div id="datoAgenda">
 			<div>Due&ntilde;o de la agenda</div>
@@ -21,8 +21,37 @@
 		<div id="seccionFormABMTarea">
 			<form id="frmABMTarea">
 				<div>
-				<!--COMPLETAR#4-->
+				<span>Titulo</span>
+				<input type="text" id="titulo" required="true"/>
+				
+				<span>Fecha</span>
+				<input type="date" id="fecha" required="true"/>
+				
+				<span>Duracion</span>
+				<input type="number" id="duracion" min="15" max="120" step="15" />
+				
+				<span>Prioridad</span>
+				<input type="radio" name="prioridad" id="prioridadAlta" value="1" checked="checked" />
+				<input type="radio" name="prioridad" id="prioridadBaja" value="0"/>
+				
+				<span>Categoria</span>
+				<select id="categoria">
+					<option value="Tramite">Tramite</option>
+					<option value="Reunion">Reunion</option>
+					<option value="Recordatorio">Recordatorio</option>
+					<option value="Otros">Otros</option>
+				</select>
+				<span>Correo</span>
+				<input type="mail" id="mail" required="true"/>
+				</div>
+				<div>					
+				<span>Descripcion</span>
+				<textarea rows="6" cols="40" id="descripcion"></textarea>
+				</div>
+				<div>
 				<button id="btnAddTarea" type="button"> Agregar </button>
+				<button id="btnUpdTarea" type="button"> Actualizar </button>
+				<button id="btnDelTarea" type="button"> Borrar </button>
 				</div>
 			<form>
 		</div>

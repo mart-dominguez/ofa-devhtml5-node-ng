@@ -1,0 +1,5 @@
+<h1>{{titulo}}</h1>
+<h2 ng-show="agenda.propietario!= undefined">{{nombrePropietario}}</h2>
+	<p  ng-hide="agenda.propietario!= undefined"><input ng-model="nombrePropietario"/>
+    <button ng-click="crearPropietario()" >Crear</button>
+</p>

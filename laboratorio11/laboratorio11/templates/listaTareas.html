@@ -1,0 +1,12 @@
+<h1>{{titulo}}</h1>
+<ul id="listaTareas">
+	<li ng-repeat="tarea in tareas">
+    	<span><a href ng-click="seleccionar(tarea)"> {{tarea.titulo}}</a></span> 
+       	<span>{{tarea.fecha}}</span>
+        <span>{{tarea.duracion}}</span>
+        <span>{{tarea.prioridad}}</span>
+        <span>{{tarea.categoria}}</span>
+        <span>{{tarea.mail}}</span>	
+    </li>
+</ul>
+<span><a ng-href="#/tarea">Nuevo</a></span> 

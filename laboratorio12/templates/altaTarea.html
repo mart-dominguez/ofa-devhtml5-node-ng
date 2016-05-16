@@ -1,0 +1,38 @@
+<h1>{{titulo}}</h1>
+<div id="bloqueGestionTareas">
+<div id="seccionFormABMTarea">
+<form id="frmABMTarea">
+<div>
+<span>Titulo</span>
+<input type="text" id="titulo" ng-model="unaTarea.titulo" required="true"/>
+<span>Fecha</span>
+<input type="date" id="fecha" ng-model="unaTarea.fecha" required="true"/>
+<span>Duracion</span>
+<input type="number" id="duracion" min="15" max="120" step="15" ng-model="unaTarea.duracion" />
+<span>Prioridad</span>
+<input type="radio" name="prioridad" id="prioridadAlta" value="1" checked="checked" ng-model="unaTarea.prioridad"  />
+<input type="radio" name="prioridad" id="prioridadBaja" value="0" ng-model="unaTarea.prioridad"/>
+<span>Categoria</span>
+<select id="categoria" ng-model="unaTarea.categoria">
+<option value="Tramite">Tramite</option>
+<option value="Reunion">Reunion</option>
+<option value="Recordatorio">Recordatorio</option>
+<option value="Otros">Otros</option>
+</select>
+<span>Correo</span>
+<input type="mail" id="mail" required="true" ng-model="unaTarea.mail"/>
+</div>
+<div> 
+<span>Descripcion</span>
+<textarea rows="6" cols="40" id="descripcion" ng-model="unaTarea.descripcion"></textarea>
+</div>
+<div>
+<button id="btnAddTarea" type="button" ng-click="agregarTarea()"> Agregar </button>
+<button id="btnUpdTarea" type="button" ng-click="actualizarTarea()"> Actualizar </button>
+<button id="btnDelTarea" type="button" ng-click="borrarTarea()"> Borrar </button>
+<button id="btnDelTarea" type="button" ng-click="cancelar()"> Cancelar </button>
+
+</div>
+</form>
+</div>
+</div>

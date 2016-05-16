@@ -1,0 +1,9 @@
+{
+  "curso": [
+    { "id": 1, "nombre": "Curso Dev HTML5" }
+  ],
+  "unidades": [
+    { "id": 1, "title": "angular", "author": "martin","cursoId": 1 },
+    { "id": 2, "title": "nodejs", "author": "juan","cursoId": 1 }
+  ]
+}

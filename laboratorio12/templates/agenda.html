@@ -1,0 +1,8 @@
+<h1>{{titulo}}</h1>
+<div ng-show="agenda.propietario!= undefined">
+<h2>Agenda de {{agenda.propietario}}</h2>
+<a ng-href="#/tarea"> Agregar Tareas</a>
+</div>
+	<p  ng-hide="agenda.propietario!= undefined"><input ng-model="nombrePropietario"/>
+    <button ng-click="crearPropietario()" >Crear</button>
+</p>

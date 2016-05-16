@@ -1,0 +1,27 @@
+{
+  "name": "laboratorio07",
+  "version": "1.0.0",
+  "description": "laboratorio 7 curso",
+  "main": "index.html",
+  "scripts": {
+    "test": "http-server "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mart-dominguez/ofa-devhtml5-node-ng.git"
+  },
+  "keywords": [
+    "angular",
+    "curso"
+  ],
+  "author": "martin dominguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mart-dominguez/ofa-devhtml5-node-ng/issues"
+  },
+  "homepage": "https://github.com/mart-dominguez/ofa-devhtml5-node-ng#readme",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5"
+  }
+}
